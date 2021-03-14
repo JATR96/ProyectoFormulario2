@@ -15,38 +15,33 @@
             <figcaption>Usuario 1</figcaption>
         </figure>
     </header>
-    <nav>   
-        <label class="busqueda">
-            <label for="texto_buscar">Buscar en la Web </label>
-            <input type="search" id="texto_buscar">
-            <button id="buscar">
-                <img src="imagenes/lupa.jpg" id="imagen_buscar">
-                <label for="text">Buscar</label>
-            </button>
-        </label>
+    
+    <nav>
+            <label class="busqueda">
+                <label for="texto_buscar">Buscar en la Web </label>
+                <input type="search" id="texto_buscar">
+                <button id="buscar">
+                    <img src="imagenes/lupa.jpg" id="imagen_buscar">
+                    <label for="text">Buscar</label>
+                </button>
+            </label>
     </nav>
-         <aside>
-            <h2>Menú</h2>
-            <button id="agregar_producto">
-                <label for="text">Agregar Producto</label>
-                <img src="imagenes/Agregar.jpg" id="imagen_agregar">
-            </button><br>
-
-            <button id="agregar_producto">
-                <label for="text">Administrar Categorias</label>
-                <img src="imagenes/Lapiz.jpg" id="imagen_categorias">
-            </button><br>
-
-            <button id="agregar_producto">
-                <label for="text">Existencia</label>
-                <img src="imagenes/Base de Datos.jpg" id="imagen_existencias">
-            </button><br>
-
-            <button id="agregar_producto">
-                <label for="text">Administrar Pagos</label>
-                <img src="imagenes/Tarjeta.jpg" id="imagen_tarjeta" alt="Tarjeta">
-            </button>
-        </aside>
+    
+    <aside>
+        <input type="checkbox" id="btn_menu">
+        <label class="img_menu" for="btn_menu"><image src="imagenes/menu.svg"></label>
+    
+        <div class="menu">
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Usuarios</a></li>
+                <li><a href="#">Clientes</a></li>
+                <li><a href="#">Proveedores</a></li>
+                <li><a href="#">Producto</a></li>
+            </ul>
+        </div>
+    </aside>
+    
     <main>
         <section>
             <form method="POST">
@@ -93,7 +88,12 @@
                     <br><br>
                     
                     <label for="Estado" class="label">Estado*</label>
-                        <input type="text" name="" id="" class="input">
+                        <input type="radio" id="programador" name="cargo" class="radio">
+                        <label for="programador" class="estados">Activo</label>
+                        <input type="radio" id="tester" name="cargo" class="radio">
+                        <label for="tester" class="estados">Suspendido</label>
+                        <input type="radio" id="Analista" name="cargo" class="radio">
+                        <label for="Analista" class="estados">De baja</label>                        
                     <br><br>
                     
                     <label for="Afecto_impuesto" class="label">Afecto a impuesto*</label>
@@ -119,9 +119,13 @@
         </section>
     </main>
     <footer>
-        <a href="#">¿Qué hacemos?</a>
-        <a href="#">Enlaces principales</a>
-        <a href="#">Contáctanos</a>
+        <div class="footer">
+            <ul>
+                <li><a href="#">¿Qué hacemos?</a></li>
+                <li><a href="#">Enlaces principales</a></li>
+                <li><a href="#">Contáctanos</a></li>
+            </ul>
+        </div>
     </footer>
 </body>
 </html>
