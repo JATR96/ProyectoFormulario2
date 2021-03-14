@@ -4,14 +4,11 @@ body{
     min-height: 100vh;
     margin:0 5%;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 8% 7% 75% 10%;
-    color: white;
-    justify-items: center;
-    justify-content: center;
+    grid-template-rows: auto auto auto auto;
     grid-template-areas: 
     "header     header      header" 
-    "nav        nav         nav" 
-    "aside      main        main" 
+    "aside      aside         nav" 
+    "main       main         main" 
     "footer     footer      footer";
 
 }
@@ -31,7 +28,6 @@ header{
 
 header h1{
     text-align: center;
-
 }
 
 header figure{
@@ -53,15 +49,17 @@ header figcaption{
 
 nav{
     grid-area: nav;
-    background-color: cornflowerblue;
+    background-color: purple;
     width: 100%;
-    border: solid 3px black;
     margin: 10px;
+    color: white;
+    font-family: Verdana, Geneva, sans-serif;
+    border: solid 3px black;
+
 }
 
 .busqueda{
     display: flex;  
-    padding-left: 680px;
     align-items: center;
 }
 
@@ -90,7 +88,7 @@ nav button{
 main{
     grid-area: main;
     background-color: lightblue;
-    width: 95%;
+    width: 100%;
     color: black;
     font-family: 'Courier New', Courier, monospace;
     border: solid 3px black;
@@ -98,7 +96,7 @@ main{
 }
 
 section{
-    padding: 55px 40px 145px;
+    padding: 55px 40px 60px;
 
 }
 
@@ -116,7 +114,7 @@ fieldset{
     height: 14px;
     margin: 0px 10px 0 0;
     padding: 10px 7px;
-    width: 120px;
+    width: 150px;
 }
 
 .input {
@@ -125,6 +123,15 @@ fieldset{
     height: 14px;
     padding: 10px 7px;
 
+}
+
+.radio {
+    height: 20px;
+}
+
+.estados {
+    font-weight: bold;
+    padding: 0px 30px 0px 0px;
 }
 
 textarea{
@@ -148,26 +155,54 @@ textarea{
 
 aside{
     grid-area: aside;
-    background-color: lightblue;
-    width: 95%;
-    color: black;
+    background: rgb(70, 70, 70);
+    width: 100%;
     font-family: 'Courier New', Courier, monospace;
-    text-align: center;
     border: solid 3px black;
     margin: 10px;
 }
 
-aside button{
-    border-radius: 10px;
-    margin: 23px;
-    height: 130px;
-    width: 160px;
-    background-color:white;
+.img_menu{
+    display: none;
+    width: 30px;
+    height: 30px;
+    padding: 15px;
+    border: 1px solid white;
 }
 
-aside button img{
-    height: 80px;
-    width: 80px;
+.img_menu:hover{
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.menu ul{
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+.menu li{
+    border: 1px solid white;
+    flex-grow: 1;
+    text-align: center;
+}
+
+.menu li a{
+    display: block;
+    padding: 25px 20px;
+    color: white;
+    text-decoration: none;
+}
+
+.menu li:hover{
+    cursor: pointer;
+    background: black;
+}
+
+
+#btn_menu{
+    display: none;
 }
 
 footer{
@@ -176,12 +211,8 @@ footer{
     background-color: cornflowerblue;
     width: 100%;
     margin: 10px;
-    color: white;
     font-family: Verdana, Geneva, sans-serif;
     border: solid 3px black;
-    justify-content: space-around;
-    align-items:center;
-    display: flex;
 }
 
 footer a {
@@ -189,3 +220,125 @@ footer a {
     color: black;
 }
 
+footer a:hover{
+    background: rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+.footer ul{
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+.footer li{
+    border: 1px solid white;
+    flex-grow: 1;
+    text-align: center;
+}
+
+.footer li a{
+    display: block;
+    padding: 25px 20px;
+    color: white;
+    text-decoration: none;
+}
+
+
+@media (max-width:320px){
+    
+    body{
+        margin: 0px;
+        width: 100%;
+        grid-template-columns: 1fr;
+        grid-template-rows: 5% auto auto auto;
+        grid-template-areas: 
+        "header"
+        "aside"
+        "main"
+        "footer";
+    }
+    header{
+        grid-area: header;
+        border: none;
+        margin: 0px;
+    }
+
+    header h1{
+        text-align: center;
+        font-size: 1.5em;
+    }
+
+    header figure{
+        display: none
+    }
+
+    aside{
+        grid-area: aside;
+        margin: 0px;
+        border: 1px solid white;
+    }
+
+    .img_menu{
+        display: block;
+    }
+
+    .menu {
+        position: absolute;
+        background: rgb(70, 70, 70);
+        width: 70%;
+        margin-left: -75%;
+        transition: all 0.8s;
+    }
+
+    .menu ul {
+        flex-direction: column;
+    }
+
+    .menu li {
+        border-top: 1px solid white;
+    }
+
+    #btn_menu:checked ~ .menu{
+        margin: 0;
+    }
+
+    nav{
+        display: none;
+    }
+
+    main{
+        margin: 0px;
+        grid-area: main;
+        border: none;
+    }
+
+    footer{
+        grid-area: footer;
+        background-color: cornflowerblue;
+        width: 100%;
+        margin: 0px;
+        font-family: Verdana, Geneva, sans-serif;
+        border: none;
+        display: grid;    
+    }
+
+    footer a {
+        text-align: center;
+        text-decoration: none;
+        color: white;
+        width: 100%;
+    }
+
+    .footer ul{
+        flex-direction: column;
+    }
+
+    .footer ul li a{
+        display: block;
+        padding: 25px 0px;
+        color: white;
+        text-decoration: none;
+    }
+}
