@@ -125,9 +125,7 @@ fieldset{
 
 }
 
-.radio {
-    height: 20px;
-}
+
 
 .estados {
     font-weight: bold;
@@ -267,11 +265,15 @@ footer a:hover{
 
     header h1{
         text-align: center;
-        font-size: 1.5em;
+        font-size: 1.2em;
     }
 
     header figure{
         display: none
+    }
+
+    nav{
+        display: none;
     }
 
     aside{
@@ -304,14 +306,56 @@ footer a:hover{
         margin: 0;
     }
 
-    nav{
-        display: none;
-    }
-
     main{
         margin: 0px;
         grid-area: main;
         border: none;
+
+    }
+
+    section{
+        padding:0px;
+    }
+
+    fieldset{
+        padding: 0px;
+    }
+
+    fieldset legend{
+        text-align: center;
+        font-size: 1.5em;
+        display: block;
+        background: rgba(70, 255, 141, 0.37);
+        padding: 10px;
+        margin-bottom: 30px;
+        width: 95%;
+        font-family: Verdana, Geneva, sans-serif;
+    }
+
+    .label {
+        font-size: 20px;
+        width: 93%;
+    }
+    
+    .input {
+        width: 93%;    
+    }
+
+    #validar{
+        padding: 10px 178px;
+    }
+
+    #validar:hover{
+        background: lightgray;
+        cursor: pointer;
+    }
+
+    #Color_etiqueta{
+        width: 20px;
+    }
+    
+    .button {
+        margin-bottom: 20px;
     }
 
     footer{
