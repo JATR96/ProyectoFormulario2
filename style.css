@@ -32,24 +32,25 @@ header h1{
 
 header figure{
     display: block;
-    padding-left: 150px;
+    padding-left: 320px;
     align-items:center;
 }
 
 header img{
     height: 50px;
     width: 50px;
-    clip-path: circle(auto);
+    clip-path: circle();
     opacity: 60%;
 }
 
 header figcaption{
     display: inline-block;
+    padding: 0px 30px;
 }
 
 nav{
     grid-area: nav;
-    background-color: purple;
+    background: rgb(70, 70, 70);
     width: 100%;
     margin: 10px;
     color: white;
@@ -61,13 +62,16 @@ nav{
 .busqueda{
     display: flex;  
     align-items: center;
+    border: 1px solid white;
+    padding: 4px;
 }
 
 .busqueda label{
     height: 14px;
     margin: 0px 10px 0 0;
     padding: 10px 7px;
-    width: 120px;
+    width: 150px;
+    text-align: center;
 }
 
 nav img{
@@ -78,11 +82,16 @@ nav img{
 
 nav button{
     display: block;
-    padding: 0px;
-    background-color: white;
-    border: 0px;
+    background: white;
+    border: 10px;
     height: 60px;
     width: 72px;
+    padding: 0px 7px;
+    margin: 0px 15px;
+}
+
+#buscar:hover{
+    cursor: pointer;
 }
 
 main{
@@ -295,6 +304,7 @@ footer a:hover{
         grid-area: header;
         border: none;
         margin: 0px;
+        background:sandybrown;
     }
 
     header h1{
