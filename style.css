@@ -87,7 +87,7 @@ nav button{
 
 main{
     grid-area: main;
-    background-color: lightblue;
+    background-color: tan;
     width: 100%;
     color: black;
     font-family: 'Courier New', Courier, monospace;
@@ -96,19 +96,27 @@ main{
 }
 
 section{
-    padding: 55px 40px 60px;
+    padding: 55px 250px 60px;
 
 }
 
 fieldset{
     padding: 50px;
+    background:grey;
+}
+
+fieldset legend{
+    font-size: 30px;
+    padding-bottom: 35px;
+    text-align: center;
 }
 
 .label {
 
-    border: 5px solid lightblue;
+    border: 5px solid white;
     display: block;
     float: left;
+    background: white;
     font-size: 13px;
     font-weight: bold;
     height: 14px;
@@ -119,13 +127,30 @@ fieldset{
 
 .input {
     background-color: #F3F3F3;
-    border: 5px solid lightblue;
+    border: 5px solid white;
     height: 14px;
     padding: 10px 7px;
+    width: 300px;
 
 }
 
+#Color_etiqueta{
+    width: 20px;
+}
 
+#Afecto_impuesto{
+    width: 20px;
+    height: 40px;
+}
+
+#validar{
+    padding: 13px 20px;
+}
+
+#validar:hover{
+    background: lightgray;
+    cursor: pointer;
+}
 
 .estados {
     font-weight: bold;
@@ -149,6 +174,15 @@ textarea{
     display: flex;
     text-align: center;
     justify-content: space-around;
+}
+
+.button input{
+    padding: 20px 40px;
+}
+
+.button input:hover{
+    background: lightgray;
+    cursor: pointer;
 }
 
 aside{
@@ -327,14 +361,19 @@ footer a:hover{
         display: block;
         background: rgba(70, 255, 141, 0.37);
         padding: 10px;
-        margin-bottom: 30px;
+        margin-bottom: 20px;
+        padding-bottom: 15px;
         width: 95%;
         font-family: Verdana, Geneva, sans-serif;
     }
 
     .label {
+        background: grey;
+        border: none;
+        color: white;
         font-size: 20px;
-        width: 93%;
+        width: 55%;
+
     }
     
     .input {
@@ -342,20 +381,15 @@ footer a:hover{
     }
 
     #validar{
-        padding: 10px 178px;
-    }
-
-    #validar:hover{
-        background: lightgray;
-        cursor: pointer;
-    }
-
-    #Color_etiqueta{
-        width: 20px;
+        padding: 10px 179px;
     }
     
     .button {
         margin-bottom: 20px;
+    }
+
+    .foto{
+        width: 130px;
     }
 
     footer{
