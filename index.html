@@ -42,7 +42,7 @@
         </div>
     </aside>
     
-    <main>
+    <main class="main_web">
         <section>
             <form method="POST">
                 <fieldset>
@@ -50,11 +50,11 @@
                     
                     <label for="Codigo" class="label">Codigo*</label>
                         <input type="text" name="Codigo" id="Codigo" class="input" pattern="[0-7]{6}" title="Debe ingrsar solo 6 números" required>
-                        <input type="button" value="Validar" >
+                        <input type="button" value="Validar" id="validar">
                     <br><br>
 
                     <label for="Nombre" class="label">Nombre*</label>
-                        <input type="text" name="Nombre" id="Nombre" placeholder="Solo letras y numeros" class="input" maxlength="100">  
+                        <input type="text" name="Nombre" id="Nombre" placeholder="Solo letras y numeros" class="input" maxlength="100" required>  
                     <br><br>
 
                     <label for="Abreviatura" class="label">Abreviatura*</label>
@@ -62,7 +62,7 @@
                     <br><br>
 
                     <label for="Categoria" class="label">Categoria*</label>
-                        <input list="Categoria" class="input">
+                        <input list="Categoria" class="input" required>
                         <datalist id="Categoria">
                             <option value="Panes especiales"></option>
                             <option value="lácteos"></option>
@@ -72,11 +72,11 @@
                     <br><br>
                     
                     <label for="RUC Proveedor" class="label">RUC Proveedor*</label>
-                        <input type="tel" name="RUC Proveedor" id="RUC Proveedor" placeholder="Solo numeros" class="input">
+                        <input type="tel" name="RUC Proveedor" id="RUC Proveedor" placeholder="Solo numeros" class="input" required>
                     <br><br>
                     
                     <label for="Precio" class="label">Precio*</label>
-                        <input type="number" name="Precio" id="Precio" class="input" step="0.01">
+                        <input type="number" name="Precio" id="Precio" class="input" step="0.01" required>
                     <br><br>
                     
                     <label for="Color_etiqueta" class="label">Color de etiqueta</label>
@@ -84,20 +84,20 @@
                     <br><br>
                     
                     <label for="Fecha" class="label">Fecha*</label>
-                        <input type="date" name="Fecha" id="Fecha" class="input">
+                        <input type="date" name="Fecha" id="Fecha" class="input" required>
                     <br><br>
                     
                     <label for="Estado" class="label">Estado*</label>
-                        <input type="radio" id="programador" name="cargo" class="radio">
-                        <label for="programador" class="estados">Activo</label>
-                        <input type="radio" id="tester" name="cargo" class="radio">
-                        <label for="tester" class="estados">Suspendido</label>
-                        <input type="radio" id="Analista" name="cargo" class="radio">
-                        <label for="Analista" class="estados">De baja</label>                        
-                    <br><br>
+                        <input list="Estado" class="input" required>
+                        <datalist id="Estado">
+                            <option value="Activo"></option>
+                            <option value="Suspendido"></option>
+                            <option value="De baja"></option>
+                        </datalist>
+                        <br><br>
                     
                     <label for="Afecto_impuesto" class="label">Afecto a impuesto*</label>
-                        <input type="checkbox" name="Afecto_impuesto" id="Afecto_impuesto" class="input">
+                        <input type="checkbox" name="Afecto_impuesto" id="Afecto_impuesto" class="input" required>
                     <br>
                     <br>
                     <br>
@@ -106,15 +106,16 @@
                     <br><br>
                     
                     <label for="Descripcion" class="label">Descripcion*</label>
-                        <textarea id="Descripcion" cols="30" rows="10"></textarea>
+                        <textarea id="Descripcion" cols="30" rows="10" required></textarea>
                     <br>
                     <br>
                     
-                    <p class="button">
+                    <div class="button">
                     <input type="submit" value="Grabar">
                     <input type="reset" value="Limpiar">
-                    </p>
+                    </div>
                 </fieldset>
+                
             </form>
         </section>
     </main>
